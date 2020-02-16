@@ -1,0 +1,246 @@
+@import 'var';
+
+#nav{
+	z-index: 1;
+	display: flex;
+	background-color: #bf2120;
+	position: fixed;
+	width: 100%;
+	p, label{
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: bold;
+		font-size: 12px;
+		transition: color 0.5s ease;
+		&:hover{
+			cursor: pointer;
+			color: #777;
+		}
+	}
+	a{
+		text-decoration: none;
+	}
+	img{
+		height: 30px;
+		color: white;
+	}
+	#loading-messier{
+		position: fixed;
+		z-index: 11;
+		display: flex;
+		justify-content: center;
+		width: 100vw;
+		height: 100vh;
+		left: 0;
+		top: 100px;
+		img{
+			width: 300px;
+			height: 300px;
+		}
+	}
+	#page-mask{
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 10;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+	}
+	#btn-daftar{
+		border: none;
+		padding: 10px 20px;
+		background-color: #ffa500;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #fff;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	.nav-left{
+		display: flex;
+		align-items: center;
+		flex-grow: 100;
+		.nav-left-item{
+			padding: 20px;
+			@media #{$information-tablet}{
+				display: none;
+			}
+		}
+		#nav-cari{
+			@media #{$information-tablet}{
+				display: none;
+			}
+			display: flex;
+			width: 100%;
+			.fa-search{
+				color: #262626;
+				background-color: white;
+				padding: 10px;
+			}
+			input{
+				font-size: 20px;
+				padding: 7px;
+				width: 100%;
+				border: none;
+				&:focus{
+					outline: none;
+				}
+			}
+		}
+	}
+	.nav-right{
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		justify-content: flex-end;
+		#hamburger-menu{
+			display: none;
+			padding-right: 10px;
+			@media #{$information-tablet}{
+				display: block;
+				.fa-bars{
+					color: white;
+				}
+			}
+		}
+		.nav-right-item{
+			@media #{$information-tablet}{
+				display: none;
+			}
+			position: relative;
+			padding: 20px;
+			.fa-user, .fa-search, .fa-close, .fa-bell{
+				color: #fff;
+				&:hover{
+					cursor: pointer;
+				}
+			}
+			#drop-down{
+				box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+				position: absolute;
+				right: 0;
+				> div{
+					padding: 5px 30px 5px 5px;
+					background-color: #fff;
+					p{
+						color: #000;
+						text-transform: none;
+						font:{
+							weight: normal;
+							size: 15px;
+						}
+					}
+					a{
+						text-decoration: none;
+					}
+					&:hover{
+						background-color: #eee;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
+
+#nav-responsive{
+	@media #{$information-desktop-only}{
+		display: none;
+	}
+	position: fixed;
+	top: 74px;
+	width: 100vw;
+	height: 100vh;
+	background-color: #db2725;
+	.last-item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		> div{
+			padding: 10px;
+		}
+		button{
+			border: none;
+			padding: 10px 20px;
+			background-color: #ffa500;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: #fff;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+	}
+	.nav-responsive-item{
+		padding: 10px;
+		border-bottom: 1px solid #fff;
+		&:nth-child(1){
+			display: flex;
+			justify-content: center;
+			> div{
+				display: flex;
+				input{
+					font-size: 20px;
+					padding: 7px;
+					border: none;
+					&:focus{
+						outline: none;
+					}
+					@media #{$information-tablet}{
+						width: 90%;
+					}
+				}
+				i{
+					font-size: 20px;
+					padding: 7px;
+					color: #000;
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+#nav-space{
+	height: 74px;
+}
+
+#rekomendasi{
+    position: absolute;
+    margin-top: 35px;
+    font-size: 20px;
+    background-color: #eee;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    @media #{$information-tablet}{
+		width: 90%;
+        left: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .rekomendasi-item{
+	    display: flex;
+	    align-items: center;
+	    padding: 10px;
+	}
+}
+
+#notification-drop-down{
+	@media #{$information-tablet}{
+		display: none;
+	}
+	position: absolute;
+	background-color: #fff;
+	.notification-drop-down-item{
+		padding: 5px;
+		width: 200px;
+		h6{
+			color: black;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+#content{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	select, input, textarea{
+		width: 80%;
+		padding: 5px;
+	}
+	td{
+		vertical-align: top;
+		padding: 5px;
+	}
+	button{
+		border: none;
+		color: #fff;
+		background-color: #0288d1;
+		padding: 10px 30px;
+		border-radius: 6px;
+	}
+	.tooltip{
+		position: absolute;
+		background-color: black;
+		color: white;
+		width: 120px;
+		padding: 0px 5px;
+		z-index: 3;
+	}
+	.tooltip::before{
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 100%;
+		margin-top: -7px;
+		border-width: 7px;
+		border-style: solid;
+		border-color: transparent black transparent transparent;
+	}
+	#form-loading{
+		display: flex;
+		> div{
+			padding: 5px;
+		}
+	}
+}

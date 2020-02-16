@@ -1,0 +1,9 @@
+$information-desktop: "only screen and (max-width : 1366px)";
+$information-tablet: "only screen and (max-width : 768px)";
+$information-phone: "only screen and (max-width : 320px)";
+$information-desktop-only: "only screen and (max-width : 1366px) and (min-width: 769px)";
+$information-tablet-only: "only screen and (max-width: 768px) and (min-width: 321px)";
+
+// Desktop (1366 x 768)
+// Tablet (768 x 1024)
+// Phone (320 x 480)

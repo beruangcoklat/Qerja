@@ -1,0 +1,173 @@
+@import 'var';
+
+#content{
+	margin: 40px;
+	@media #{$information-phone}{
+		margin: 4px;
+	}
+	.company-content-item-gaji{
+		@media #{$information-phone}{
+			margin:{
+				top: 5px;
+				bottom: 5px;
+				right: 0;
+				left: 0;
+			}	
+		}
+		margin: 10px;
+		display: flex;
+		justify-content: flex-start;
+		border: 1px solid black;
+		> div{
+			width: 25%;
+			padding: 20px;
+			@media #{$information-phone}{
+				padding: 1px;
+				width: 50%;
+				font-size: 12px;
+			}
+			&:nth-child(1){
+				width: 10%;
+				@media #{$information-phone}{
+					display: none;
+				}
+			}
+			&:nth-child(4){
+				@media #{$information-phone}{
+					display: none;
+				}	
+			}
+			&:nth-child(2){
+				> div{
+					&:nth-child(1){
+						font-weight: bold;
+						&:hover{
+							text-decoration: underline;
+							cursor: pointer;
+						}
+					}
+					&:nth-child(2){
+						&:hover{
+							text-decoration: underline;
+							cursor: pointer;
+						}
+					}
+					&:nth-child(3){
+						color: blue;
+						@media #{$information-phone}{
+							font-size: 10px;
+						}
+					}
+				}
+			}
+			img{
+				width: 50px;
+				height: 50px;
+			}
+			button{
+				border: none;
+				padding: 10px 20px;
+				background-color: #ffa500;
+				color: #fff;
+				font-weight: bold;
+			}
+		}
+	}
+
+	.company-content-item-lowongan{
+		border: 1px solid #ccc;
+		margin: 5px;
+		.company-content-item-lowongan-container{
+			> div{
+				display: flex;
+				padding: 10px;
+				> div{
+					padding-right: 10px;
+				}
+
+			}
+			.position{
+				color: #34495e;
+				font-weight: bold;
+				font-size: 25px;
+				p:hover{
+					cursor: pointer;
+					text-decoration: underline;
+				}
+			}
+			.company{
+				p{
+					color: #1976d2;
+					font-weight: bold;
+					&:hover{
+						cursor: pointer;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	.company-content-item-review{
+		margin: 10px;
+		@media #{$information-phone}{
+			margin: {
+				top: 10px;
+				bottom: 10px;
+				right: 0;
+				left: 0;
+			}
+			font-size: 12px;
+		}
+		display: flex;
+		justify-content: flex-start;
+		border: 1px solid black;
+		> div{
+			padding: 20px;
+			@media #{$information-phone}{
+				padding: 2px;
+			}
+			&:nth-child(1){
+				width: 30%;
+				> div{
+					&:nth-child(1){
+						font-weight: bold;
+					}
+					&:hover{
+						cursor: pointer;
+						text-decoration: underline;
+					}
+				}
+				@media #{$information-phone}{
+					width: 100%;
+				}
+			}
+			&:nth-child(2){
+				display: flex;
+				> div{
+					@media #{$information-phone}{
+						padding: 0px;
+					}		
+					padding: 10px;
+
+					.fa-thumbs-up{
+						background-color: #43a047;
+						color: #fff;
+						padding: 5px;
+						border-radius: 6px;
+						@media #{$information-phone}{
+							display: none;
+						}
+					}
+					.lihat-lebih-lanjut{
+						color: #757575;
+						&:hover{
+							cursor: pointer;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}

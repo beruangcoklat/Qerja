@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAQ,CACP,KAAK,CAAE,IAAI",
+"sources": ["../scss/reviewCompany.scss"],
+"names": [],
+"file": "reviewCompany.css"
+}

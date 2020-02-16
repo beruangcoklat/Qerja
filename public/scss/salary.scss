@@ -1,0 +1,98 @@
+@import 'var';
+
+#content{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    #form{
+        @media #{$information-tablet}{
+            width: 90%;
+        }
+        #first-form-group{
+            border: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #last-form-group{
+            display: flex;
+            justify-content: center;
+            button{
+                border: none;
+                background-color: #0288d1;
+                color: #fff;
+                padding: 5px 20px;
+                border-radius: 6px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        .form-group{
+            border: 1px solid #ccc;
+            padding: 10px;
+            .form-item{
+                display: flex;
+                padding: 10px;
+                > div{
+                    padding: 0px 5px;
+                    position: relative;
+                    i{
+                        padding: 2px;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    #form-item-gender{
+                        > div{
+                            display: flex;
+                            align-items: center;
+                            *{
+                                padding: 5px;
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        flex-grow: 1;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                    .tooltip{
+                        position: absolute;
+                        background-color: black;
+                        color: white;
+                        width: 120px;
+                        padding: 0px 5px;
+                        z-index: 3;
+                        right: -150px;
+                    }
+                    .tooltip::before{
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 100%;
+                        margin-top: -7px;
+                        border-width: 7px;
+                        border-style: solid;
+                        border-color: transparent black transparent transparent;
+                    }
+                }
+                #form-item-periode{
+                    > div{
+                        display: flex;
+                        align-items: center;
+                        *{
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(1){
+                border: none;
+                font: {
+                    weight: bold;
+                    size: 20px;
+                }
+            }
+        }
+    }
+}

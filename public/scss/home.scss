@@ -1,0 +1,277 @@
+@import 'var';
+
+#header{
+	@media #{$information-phone}{
+		background-attachment: scroll;
+		height: 90vh;
+	}
+	background: {
+		attachment: fixed;
+		image: url('../image/header.jpg');
+		size: 100% 100%;
+	}
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	#header-find{
+		display: flex;
+		justify-content: center;
+		.fa-search{
+			color: #262626;
+			background-color: white;
+			padding: 10px;
+		}
+		button{
+			border: none;
+			background-color: #ffa500;
+			padding: 10px;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+		input{
+			border: none;
+			width: 500px;
+			padding: 10px;
+			font-size: 15px;
+			&:focus{
+				outline: none;
+			}
+		}
+	}
+	> div{
+		padding: 20px;
+	}
+}
+
+#content{
+	#nav-review{
+		display: flex;
+		background-color: #fff;
+		position: sticky;
+		top: 73px;
+	    box-shadow: 10px 7px 23px -6px rgba(0,0,0,0.75);
+	    margin-bottom: 20px;
+	    .nav-review-item{
+			padding: 20px;
+			a{
+				text-decoration: none;
+				color: black;
+				font-weight: bold;
+			}
+		}
+
+	}
+	#slider{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media #{$information-phone}{
+			flex-direction: column;
+		}
+		.fa-angle-double-left, .fa-angle-double-right{
+			color: #757575;
+			font-size: 50px;
+			margin: 10px;
+			&:hover{
+				cursor: pointer;
+			}
+			@media #{$information-phone}{
+				display: none;
+			}
+		}
+		.fa-star{
+			color: #ccc;
+		}
+		.activeStar{
+			color: orange;
+		}
+		.company{
+			@media #{$information-tablet}{
+				display: block;
+				width: 600px;
+			}
+			@media #{$information-phone}{
+				width: 90%;
+			}
+			box-shadow: 3px 3px 5px 6px #ccc;
+			margin: 10px;
+			width: 350px;
+			border: 1px solid #999;
+			display: inline-block;
+			.company-top{
+				display: flex;
+				padding: 5px;
+				.company-top-left{
+					display: flex;
+					img{
+						width: 50px;
+						height: 50px;
+					}
+				}
+				.company-top-right{
+					display: flex;
+					width: 100%;
+					flex-direction: column;
+					padding: 5px;
+					div{
+						display: flex;
+						justify-content: space-between;
+						p{
+							&:hover{
+								text-decoration: underline;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+			.company-name{
+				display: flex;
+				justify-content: flex-start;
+				*{
+					padding: 5px;
+				}
+				div{
+					margin: 5px;
+				}
+				p{
+					color: dodgerblue;
+					font-weight: bold;
+				}
+				.fa-thumbs-up{
+					background-color: #43a047;
+					color: #fff;
+					border-radius: 6px;
+				}
+			}
+			.company-content{
+				display: flex;
+				flex-direction: column;
+				label{
+					color: blue;
+					font-size: 10px;
+					font-weight: bold;
+					&:hover{
+						cursor: pointer;
+					}
+				}
+				.review{
+					margin: 10px;
+				}
+				.lihat{
+					padding: 5px;
+					color: #777;
+					&:hover{
+						cursor: pointer;
+					}
+				}
+				.positif{
+					display: flex;
+					padding: 5px 5px;
+					p:nth-child(1){
+						font-weight: bold;
+						margin-right: 5px;
+					}
+					p{
+						color: #777;
+					}
+				}
+				.deskripsi-judul{
+					padding: 5px;
+					font: {
+						size: 15px;
+						weight: bold;	
+					}
+				}
+				.deskripsi-isi{
+					padding: 5px;
+				}
+			}
+		}
+	}
+	#info-gaji{
+		border: 1px solid black;
+		width: 800px;
+		margin: auto;
+		@media #{$information-tablet}{
+			width: 80%;
+		}
+		> div{
+			> div{
+				width: 20%;
+				&:nth-child(1){
+					display: flex;
+					width: 40%;
+				}
+				input{
+					width: 100%;
+				}
+			}
+		}
+		#info-gaji-header{
+			padding: 10px;
+			p{
+				padding: 10px;
+				font-weight: bold;
+			}
+			hr{
+				margin: 10px;
+			}
+		}
+		#info-gaji-footer{
+			padding: 10px;
+			hr{
+				margin: 10px;
+			}
+			p{
+				margin: 10px;
+				color: #aaa;
+				&:hover{
+					color: #aaa;
+					text-decoration: underline;
+					cursor: pointer;
+				}
+			}
+		}
+		.info-gaji-item{
+			display: flex;
+			padding: 10px;
+			@media #{$information-phone}{
+				display: block;
+				border: 1px solid #ccc;	
+			}
+			> div{
+				padding: 10px;
+				@media #{$information-phone}{
+					&:nth-child(3){
+						display: none;
+					}
+					&:nth-child(2){
+						display: flex;
+						width: 250px;
+						*{
+							flex-grow: 1;
+							margin: 2px;
+						}
+					}
+					.info-gaji-item-name{
+						display: flex;
+						flex-direction: column;
+						p{
+							&:nth-child(1){
+								font-weight: bold;
+							}
+							width: 150px;
+							margin: 2px;
+						}
+					}
+				}
+			}
+			img{
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+}

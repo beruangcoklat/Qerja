@@ -1,0 +1,143 @@
+@import 'var';
+
+#content{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	@media #{$information-phone}{
+		margin-top: 0;
+	}
+	@media #{$information-tablet-only} {
+		*{
+			font-size: 30px;
+		}
+	}
+	#content-container{
+		#chat-room{
+			@media #{$information-phone}{
+				width: 320px;
+				height: 360px;
+			}
+			@media #{$information-tablet-only} {
+				width: 600px;
+				height: 800px;
+			}
+			background-color: #ddd;
+			position: relative;
+			width: 500px;
+			height: 500px;
+			overflow: scroll;
+			&::-webkit-scrollbar {
+			    width: 6px;
+			}
+			&::-webkit-scrollbar-thumb {
+			    border-radius: 10px;
+			    background-color: #bf2120;
+			}
+			.chat-item{
+				display: flex;
+				margin: 10px;
+				.chat-item-container{
+					display: flex;
+					flex-direction: column;
+					.chat-item-user{
+						padding-left: 10px;	
+					}
+					.chat-item-message{
+						padding: 10px;
+						background-color: #35ba75;
+						display: inline-block;
+						border-radius: 6px;
+						width: 200px;
+					}
+				}
+			}
+			.right{
+				justify-content: flex-end;
+				.chat-item-message{
+					background-color: #fff !important;
+				}
+			}
+		}
+		#chat-input{
+			display: flex;
+			input{
+				flex-grow: 10;
+				border: 1px solid #ccc;
+				font-size: 15px;
+				padding: 10px;
+				&:focus{
+					outline: none;
+				}
+				@media screen and (max-width: 768px) and (min-width: 321px) {
+					font-size: 30px;
+				}
+			}
+			button{
+				flex-grow: 1;
+				border: none;
+				padding: 10px;
+				background-color: #bf2120;
+				color: white;
+				&:hover{
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	#chat-list-btn{
+		position: fixed;
+		left: 0;
+		top: 40%;
+		img{
+			width: 60px;
+			height: 35px;
+			@media #{$information-phone} {
+				width: 30px;
+				height: 17.5px;
+				opacity: 0.7;
+			}
+		}
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	#chat-list-container{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 10;
+		background: rgba(0, 0, 0, 0.4);
+		#chat-list{
+			background-color: white;
+			width: 300px;
+			height: 400px;
+			overflow: scroll;
+			&::-webkit-scrollbar {
+			    width: 6px;
+			}
+			&::-webkit-scrollbar-thumb {
+			    border-radius: 10px;
+			    background-color: #bf2120;
+			}
+			.chat-list-item{
+				display: flex;
+				align-items: center;
+				img{
+					width: 50px;
+					height: 50px;
+				}
+				&:hover{
+					cursor: pointer;
+					background-color: #eee;
+				}
+			}
+		}
+	}
+}
